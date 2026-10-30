@@ -72,7 +72,8 @@ st.markdown('<div class="brand"><div class="brand-mark">P</div><div><div class="
 view=st.radio('Workspace',['Discover','Property desk','Market atlas','Method & evidence'],key='workspace',horizontal=True,label_visibility='collapsed')
 
 if view=='Discover':
-    for key,value in ss.get('search_memory',{}).items():ss.setdefault(key,value)
+    for key,value in ss.get('search_memory',{}).items():
+        if key not in ['filter_budget','filter_area','filter_quality']:ss.setdefault(key,value)
     left,right=st.columns([1.25,1],gap='large',vertical_alignment='center')
     with left:
         eyebrow('A considered approach to property')
@@ -90,10 +91,10 @@ if view=='Discover':
             eyebrow('Make it yours');st.subheader('Your search')
             city=st.selectbox('City',['All cities']+sorted(d.City.unique().tolist()),key='filter_city')
             kind=st.selectbox('Property type',['All types']+sorted(d.Property_Type.unique().tolist()),key='filter_type')
-            budget=st.slider('Maximum price (INR lakhs)',float(d.Price_in_Lakhs.min()),float(d.Price_in_Lakhs.max()),float(d.Price_in_Lakhs.max()),key='filter_budget')
+            budget=st.slider('Maximum price (INR lakhs)',float(d.Price_in_Lakhs.min()),float(d.Price_in_Lakhs.max()),ss.get('search_memory',{}).get('filter_budget',float(d.Price_in_Lakhs.max())),key='filter_budget')
             bhk=st.multiselect('Bedrooms (BHK)',sorted(d.BHK.unique().tolist()),key='filter_bhk')
-            area=st.slider('Area range (sq ft)',int(d.Size_in_SqFt.min()),int(d.Size_in_SqFt.max()),(int(d.Size_in_SqFt.min()),int(d.Size_in_SqFt.max())),key='filter_area')
-            valid=st.checkbox('Exclude inconsistent floor records',value=True,key='filter_quality')
+            area=st.slider('Area range (sq ft)',int(d.Size_in_SqFt.min()),int(d.Size_in_SqFt.max()),ss.get('search_memory',{}).get('filter_area',(int(d.Size_in_SqFt.min()),int(d.Size_in_SqFt.max()))),key='filter_area')
+            valid=st.checkbox('Exclude inconsistent floor records',value=ss.get('search_memory',{}).get('filter_quality',True),key='filter_quality')
             st.caption('The dataset contains source inconsistencies. This filter excludes records where the floor exceeds the building total.')
     with results:
         heading('The property edit','Browse a shortlist, then open a listing in the property desk.')

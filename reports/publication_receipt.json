@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/purans07/Real-Estate-Investment-Advisor",
+  "branch": "main",
+  "verified_implementation_commit": "dde5c2acb09b4867e6072e18c8c550a7a1c922b5",
+  "published_components": [
+    "original briefs",
+    "raw and audited CSV",
+    "model targets and split assignments",
+    "EDA and training scripts",
+    "twenty EDA tables and visuals",
+    "methodology and requirement register",
+    "saved models and feature importance",
+    "portable six-run MLflow export and restoration"
+  ],
+  "public_app_url": null,
+  "hosting_status": "awaiting user GitHub/Streamlit browser sign-in"
+}

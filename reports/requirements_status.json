@@ -66,8 +66,8 @@
   },
   {
     "requirement": "Complete version controlled project",
-    "status": "prepared_for_publication",
-    "evidence_or_next_step": "Code, data, reports and portable experiment export are prepared; publication receipt separately records the verified GitHub commit."
+    "status": "published_to_github",
+    "evidence_or_next_step": "Complete source, data, reports and portable experiments published; see publication_receipt.json for the verified implementation commit."
   },
   {
     "requirement": "Public Streamlit hosting",

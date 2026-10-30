@@ -80,11 +80,11 @@ The app separates model classification, direct screening and future-value scenar
 | Crime versus investment classification | blocked_missing_data | Requires geographic crime rates for the relevant reporting period. |
 | Infrastructure versus resale value | blocked_missing_data | Requires defined infrastructure scores and observed resale values. |
 | High accuracy and low RMSE | demonstrated_only_for_synthetic_rules | Numerical results are reported below; briefs provide no cutoff and observed return forecasting skill is not established. |
-| Complete version controlled project | prepared_for_publication | Code, data, reports and portable experiment export are prepared; publication receipt separately records the verified GitHub commit. |
+| Complete version controlled project | published_to_github | Complete source, data, reports and portable experiments published; see publication_receipt.json for the verified implementation commit. |
 | Public Streamlit hosting | pending_browser_sign_in | User must complete the existing GitHub/Streamlit sign-in before deployment can be verified. |
 | Project documentation and use cases | implemented | README, methodology, EDA findings, data gaps, deployment guide, demo and verification. |
 | Ten day timeline | documented_plan | README includes a ten-day delivery plan; external evaluation acceptance is not guaranteed. |
 
 ## Outstanding dependencies
 
-The supplied CSV contains no dated transactions, crime rates, defined infrastructure scores or realized returns. Those literal analyses cannot be completed by renaming construction year as a transaction date or inventing scores. Additional verified data or evaluator-approved exclusions are required. The sign-in page is awaiting the user; a public URL must be checked after hosting. A GitHub commit alone is not public app deployment.
+The user-provided Drive link was downloaded and verified byte-for-byte identical to the local CSV; linked_dataset_check.json records the schema and comparison. The supplied CSV contains no dated transactions, crime rates, defined infrastructure scores or realized returns. Those literal analyses cannot be completed by renaming construction year as a transaction date or inventing scores. Additional verified data or evaluator-approved exclusions are required. The sign-in page is awaiting the user; a public URL must be checked after hosting. A GitHub commit alone is not public app deployment.

@@ -45,5 +45,5 @@ a {color:var(--green);}
 .result-label {font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--green);}
 .result-value {font-family:Georgia,serif;font-size:2rem;line-height:1.15;margin:.5rem 0;}
 .method-note {font-size:.85rem;border-left:2px solid #9aa88e;padding-left:1rem;color:var(--muted);margin:1rem 0;}
-@media(max-width:760px){.block-container{padding:1.5rem 1rem 2rem;}h1{font-size:2.8rem!important;}.hero-art{min-height:180px;}.st-key-workspace [role="radiogroup"] label{padding:.4rem .7rem;font-size:.8rem;}.brand-name{font-size:.75rem;}.st-key-assessment_results{padding:1rem;}}
+@media(max-width:760px){.block-container{padding:4.5rem 1rem 2rem;}h1{font-size:2.8rem!important;}.hero-art{min-height:180px;}.st-key-workspace [role="radiogroup"] label{padding:.4rem .7rem;font-size:.8rem;}.brand-name{font-size:.75rem;}.st-key-assessment_results{padding:1rem;}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;}}

@@ -1,0 +1,92 @@
+[
+  {
+    "task": "regression",
+    "model": "median_baseline",
+    "mae": 122.3148068,
+    "rmse": 141.19483381417325,
+    "r2": -2.3854829735325822e-05,
+    "validation_selection_score": -141.14853941648846,
+    "run_id": "3f3eac9ebd5d4c07861e11f4205ec48e"
+  },
+  {
+    "task": "regression",
+    "model": "ridge",
+    "mae": 122.31790501787799,
+    "rmse": 141.20888115749034,
+    "r2": -0.00022284762330770924,
+    "validation_selection_score": -141.18768070384695,
+    "run_id": "a28512e7c66049d69b0e978784d7e583"
+  },
+  {
+    "task": "regression",
+    "model": "forest",
+    "mae": 122.36032818074577,
+    "rmse": 141.2405204168302,
+    "r2": -0.00067111766340755,
+    "validation_selection_score": -141.19207323357875,
+    "run_id": "d577eb1ae6544243babdf177a76b94b3"
+  },
+  {
+    "task": "classification",
+    "model": "majority_baseline",
+    "accuracy": 0.49962,
+    "precision": 0.49962,
+    "recall": 1.0,
+    "f1": 0.6663288032968352,
+    "roc_auc": 0.5,
+    "validation_selection_score": 0.6692040509428689,
+    "run_id": "3151b6335a2345f2bbf2cd86953b99a1",
+    "confusion_matrix": [
+      [
+        0,
+        25019
+      ],
+      [
+        0,
+        24981
+      ]
+    ]
+  },
+  {
+    "task": "classification",
+    "model": "logistic",
+    "accuracy": 0.71268,
+    "precision": 0.7111597374179431,
+    "recall": 0.7155438132981066,
+    "f1": 0.7133450395083406,
+    "roc_auc": 0.7852309847494168,
+    "validation_selection_score": 0.7159480353869451,
+    "run_id": "57ed4268740e420e8511b4f5ce03cdf0",
+    "confusion_matrix": [
+      [
+        17759,
+        7260
+      ],
+      [
+        7106,
+        17875
+      ]
+    ]
+  },
+  {
+    "task": "classification",
+    "model": "forest",
+    "accuracy": 0.71268,
+    "precision": 0.7037975655646431,
+    "recall": 0.7337176253953004,
+    "f1": 0.7184462213860144,
+    "roc_auc": 0.7774855242756389,
+    "validation_selection_score": 0.7203212222113408,
+    "run_id": "9cdc68b71e1e40928029f5b5c774bd3b",
+    "confusion_matrix": [
+      [
+        17305,
+        7714
+      ],
+      [
+        6652,
+        18329
+      ]
+    ]
+  }
+]

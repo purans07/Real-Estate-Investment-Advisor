@@ -1,0 +1,257 @@
+{
+  "rows": 250000,
+  "source_columns": 23,
+  "missing_by_column": {
+    "ID": 0,
+    "State": 0,
+    "City": 0,
+    "Locality": 0,
+    "Property_Type": 0,
+    "BHK": 0,
+    "Size_in_SqFt": 0,
+    "Price_in_Lakhs": 0,
+    "Price_per_SqFt": 0,
+    "Year_Built": 0,
+    "Furnished_Status": 0,
+    "Floor_No": 0,
+    "Total_Floors": 0,
+    "Age_of_Property": 0,
+    "Nearby_Schools": 0,
+    "Nearby_Hospitals": 0,
+    "Public_Transport_Accessibility": 0,
+    "Parking_Space": 0,
+    "Security": 0,
+    "Amenities": 0,
+    "Facing": 0,
+    "Owner_Type": 0,
+    "Availability_Status": 0
+  },
+  "duplicate_rows": 0,
+  "duplicate_ids": 0,
+  "duplicate_rows_excluding_id": 0,
+  "floor_above_total": 116304,
+  "implied_reference_year_counts": {
+    "2025": 250000
+  },
+  "provided_price_matches_lakhs_per_sqft_rounded": 249979,
+  "nonpositive_size_or_price": 0,
+  "price_per_sqft_iqr_flags": 19723,
+  "states": 20,
+  "cities": 42,
+  "locality_labels": 500,
+  "price_size_correlation": -0.00252854679253891,
+  "numeric_summary": {
+    "ID": {
+      "count": 250000.0,
+      "mean": 125000.5,
+      "std": 72168.92798612619,
+      "min": 1.0,
+      "25%": 62500.75,
+      "50%": 125000.5,
+      "75%": 187500.25,
+      "max": 250000.0
+    },
+    "BHK": {
+      "count": 250000.0,
+      "mean": 2.999396,
+      "std": 1.4155209818235122,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 3.0,
+      "75%": 4.0,
+      "max": 5.0
+    },
+    "Size_in_SqFt": {
+      "count": 250000.0,
+      "mean": 2749.813216,
+      "std": 1300.606953754104,
+      "min": 500.0,
+      "25%": 1623.0,
+      "50%": 2747.0,
+      "75%": 3874.0,
+      "max": 5000.0
+    },
+    "Price_in_Lakhs": {
+      "count": 250000.0,
+      "mean": 254.58685404,
+      "std": 141.349921072615,
+      "min": 10.0,
+      "25%": 132.55,
+      "50%": 253.87,
+      "75%": 376.88,
+      "max": 500.0
+    },
+    "Price_per_SqFt": {
+      "count": 250000.0,
+      "mean": 0.1305968,
+      "std": 0.13074724398291246,
+      "min": 0.0,
+      "25%": 0.05,
+      "50%": 0.09,
+      "75%": 0.16,
+      "max": 0.99
+    },
+    "Year_Built": {
+      "count": 250000.0,
+      "mean": 2006.520012,
+      "std": 9.808575449700399,
+      "min": 1990.0,
+      "25%": 1998.0,
+      "50%": 2007.0,
+      "75%": 2015.0,
+      "max": 2023.0
+    },
+    "Floor_No": {
+      "count": 250000.0,
+      "mean": 14.9668,
+      "std": 8.948046604156247,
+      "min": 0.0,
+      "25%": 7.0,
+      "50%": 15.0,
+      "75%": 23.0,
+      "max": 30.0
+    },
+    "Total_Floors": {
+      "count": 250000.0,
+      "mean": 15.503004,
+      "std": 8.6716178285143,
+      "min": 1.0,
+      "25%": 8.0,
+      "50%": 15.0,
+      "75%": 23.0,
+      "max": 30.0
+    },
+    "Age_of_Property": {
+      "count": 250000.0,
+      "mean": 18.479988,
+      "std": 9.8085754497004,
+      "min": 2.0,
+      "25%": 10.0,
+      "50%": 18.0,
+      "75%": 27.0,
+      "max": 35.0
+    },
+    "Nearby_Schools": {
+      "count": 250000.0,
+      "mean": 5.49986,
+      "std": 2.8786387627912795,
+      "min": 1.0,
+      "25%": 3.0,
+      "50%": 5.0,
+      "75%": 8.0,
+      "max": 10.0
+    },
+    "Nearby_Hospitals": {
+      "count": 250000.0,
+      "mean": 5.498016,
+      "std": 2.8718602079607245,
+      "min": 1.0,
+      "25%": 3.0,
+      "50%": 5.0,
+      "75%": 8.0,
+      "max": 10.0
+    },
+    "Calculated_Price_per_SqFt_INR": {
+      "count": 250000.0,
+      "mean": 13058.281775872185,
+      "std": 13071.850480072948,
+      "min": 202.24719101123594,
+      "25%": 4802.839710440703,
+      "50%": 9244.747593959637,
+      "75%": 15987.388517279822,
+      "max": 99182.0
+    },
+    "Implied_Reference_Year": {
+      "count": 250000.0,
+      "mean": 2025.0,
+      "std": 0.0,
+      "min": 2025.0,
+      "25%": 2025.0,
+      "50%": 2025.0,
+      "75%": 2025.0,
+      "max": 2025.0
+    },
+    "Amenity_Count": {
+      "count": 250000.0,
+      "mean": 3.000288,
+      "std": 1.414284242242581,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 3.0,
+      "75%": 4.0,
+      "max": 5.0
+    },
+    "Schools_per_1000_SqFt": {
+      "count": 250000.0,
+      "mean": 2.815372748143388,
+      "std": 2.740423753592433,
+      "min": 0.2,
+      "25%": 1.0911074740861975,
+      "50%": 1.9995556542990447,
+      "75%": 3.423485107839781,
+      "max": 20.0
+    }
+  },
+  "categories": {
+    "State": {
+      "Odisha": 12681,
+      "Tamil Nadu": 12629,
+      "West Bengal": 12622,
+      "Gujarat": 12578,
+      "Delhi": 12552,
+      "Telangana": 12539,
+      "Maharashtra": 12533,
+      "Punjab": 12516,
+      "Uttar Pradesh": 12508,
+      "Uttarakhand": 12501,
+      "Assam": 12496,
+      "Kerala": 12487,
+      "Jharkhand": 12480,
+      "Andhra Pradesh": 12462,
+      "Chhattisgarh": 12456,
+      "Madhya Pradesh": 12451,
+      "Karnataka": 12424,
+      "Rajasthan": 12402,
+      "Bihar": 12369,
+      "Haryana": 12314
+    },
+    "Property_Type": {
+      "Villa": 83744,
+      "Independent House": 83300,
+      "Apartment": 82956
+    },
+    "Furnished_Status": {
+      "Unfurnished": 83408,
+      "Semi-furnished": 83374,
+      "Furnished": 83218
+    },
+    "Public_Transport_Accessibility": {
+      "High": 83705,
+      "Low": 83287,
+      "Medium": 83008
+    },
+    "Parking_Space": {
+      "No": 125456,
+      "Yes": 124544
+    },
+    "Security": {
+      "Yes": 125233,
+      "No": 124767
+    },
+    "Facing": {
+      "West": 62757,
+      "North": 62637,
+      "South": 62337,
+      "East": 62269
+    },
+    "Owner_Type": {
+      "Broker": 83479,
+      "Owner": 83268,
+      "Builder": 83253
+    },
+    "Availability_Status": {
+      "Under_Construction": 125035,
+      "Ready_to_Move": 124965
+    }
+  }
+}

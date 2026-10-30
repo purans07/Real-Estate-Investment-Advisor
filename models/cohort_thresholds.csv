@@ -1,0 +1,127 @@
+City,Property_Type,Training_Median_Price_per_SqFt_INR
+Ahmedabad,Apartment,9181.182820105765
+Ahmedabad,Independent House,9424.55775234131
+Ahmedabad,Villa,9068.540939872768
+Amritsar,Apartment,9190.412782956058
+Amritsar,Independent House,9074.90055805929
+Amritsar,Villa,9037.51617076326
+Bangalore,Apartment,9518.05154114844
+Bangalore,Independent House,9591.075347476226
+Bangalore,Villa,9006.067291781577
+Bhopal,Apartment,9584.018264840182
+Bhopal,Independent House,9068.88300152985
+Bhopal,Villa,8891.507669285447
+Bhubaneswar,Apartment,9034.283848398369
+Bhubaneswar,Independent House,9299.260548064376
+Bhubaneswar,Villa,9301.390408300103
+Bilaspur,Apartment,9351.541373715521
+Bilaspur,Independent House,9444.049765359632
+Bilaspur,Villa,8996.680286006129
+Chennai,Apartment,9132.413901611242
+Chennai,Independent House,10063.122219868672
+Chennai,Villa,9146.355008475024
+Coimbatore,Apartment,9539.574609009744
+Coimbatore,Independent House,9383.561643835616
+Coimbatore,Villa,8921.773309722812
+Cuttack,Apartment,8999.240121580548
+Cuttack,Independent House,9205.613305613306
+Cuttack,Villa,9435.00723289936
+Dehradun,Apartment,9086.057095573024
+Dehradun,Independent House,9330.089628681179
+Dehradun,Villa,9629.8828125
+Durgapur,Apartment,8757.901851718392
+Durgapur,Independent House,8865.502595563945
+Durgapur,Villa,9323.509440417594
+Dwarka,Apartment,9108.119938717444
+Dwarka,Independent House,9397.530864197532
+Dwarka,Villa,9193.722946875685
+Faridabad,Apartment,9071.275619455491
+Faridabad,Independent House,9298.036719122556
+Faridabad,Villa,9147.06794911573
+Gaya,Apartment,9311.40350877193
+Gaya,Independent House,9266.024888471473
+Gaya,Villa,9491.510277033065
+Gurgaon,Apartment,9543.753897318646
+Gurgaon,Independent House,9399.800846402788
+Gurgaon,Villa,9225.141634479281
+Guwahati,Apartment,9377.350517642088
+Guwahati,Independent House,9203.794193733831
+Guwahati,Villa,8829.129604672056
+Haridwar,Apartment,9009.895052473763
+Haridwar,Independent House,9037.307741369636
+Haridwar,Villa,8856.993464052288
+Hyderabad,Apartment,9344.234659474037
+Hyderabad,Independent House,9146.707193515704
+Hyderabad,Villa,9540.969417195614
+Indore,Apartment,9218.862491000722
+Indore,Independent House,9196.958174904943
+Indore,Villa,9161.448349307775
+Jaipur,Apartment,9023.006477551931
+Jaipur,Independent House,8900.580455759671
+Jaipur,Villa,9345.894451736847
+Jamshedpur,Apartment,9148.861171366594
+Jamshedpur,Independent House,9437.815887530913
+Jamshedpur,Villa,8880.854348944931
+Jodhpur,Apartment,9278.534665455647
+Jodhpur,Independent House,9337.792642140468
+Jodhpur,Villa,9519.160839160839
+Kochi,Apartment,9068.21711742111
+Kochi,Independent House,9474.66974250114
+Kochi,Villa,9070.532544378699
+Kolkata,Apartment,9134.334382816509
+Kolkata,Independent House,9428.61661087918
+Kolkata,Villa,8983.528496286212
+Lucknow,Apartment,9228.695917052893
+Lucknow,Independent House,9535.314649328895
+Lucknow,Villa,8875.3573299919
+Ludhiana,Apartment,8727.04
+Ludhiana,Independent House,9099.52606635071
+Ludhiana,Villa,9396.970127573575
+Mangalore,Apartment,9834.109864440954
+Mangalore,Independent House,9520.593692022263
+Mangalore,Villa,8997.505290675961
+Mumbai,Apartment,9972.648183106614
+Mumbai,Independent House,9201.15588512252
+Mumbai,Villa,9120.506535947712
+Mysore,Apartment,9201.382580059051
+Mysore,Independent House,9612.842813804227
+Mysore,Villa,9040.23484339074
+Nagpur,Apartment,9280.65942903096
+Nagpur,Independent House,9496.19238476954
+Nagpur,Villa,9042.163543441227
+New Delhi,Apartment,9058.722193360112
+New Delhi,Independent House,8932.46216102659
+New Delhi,Villa,9244.06779661017
+Noida,Apartment,9585.261353898886
+Noida,Independent House,9419.749634162996
+Noida,Villa,9360.39307840205
+Patna,Apartment,9761.129934801582
+Patna,Independent House,8808.518253400143
+Patna,Villa,9079.38405261602
+Pune,Apartment,9606.392207984056
+Pune,Independent House,9738.951419812482
+Pune,Villa,9488.23226030475
+Raipur,Apartment,9235.765673175745
+Raipur,Independent House,9266.313997030149
+Raipur,Villa,9054.98130635584
+Ranchi,Apartment,9613.811857206285
+Ranchi,Independent House,9356.646952944202
+Ranchi,Villa,9487.650775416427
+Silchar,Apartment,9241.659519725557
+Silchar,Independent House,9092.8140648217
+Silchar,Villa,9296.64660361135
+Surat,Apartment,9536.654135338345
+Surat,Independent House,9845.271861201152
+Surat,Villa,9607.530452997737
+Trivandrum,Apartment,9517.557251908396
+Trivandrum,Independent House,9556.72068636797
+Trivandrum,Villa,8627.311522048363
+Vijayawada,Apartment,9000.488063186636
+Vijayawada,Independent House,9488.594833035419
+Vijayawada,Villa,9249.651324965133
+Vishakhapatnam,Apartment,9264.839109290315
+Vishakhapatnam,Independent House,9174.115834315236
+Vishakhapatnam,Villa,9222.597927155939
+Warangal,Apartment,9019.08227862637
+Warangal,Independent House,9413.22962079578
+Warangal,Villa,9385.087519890883

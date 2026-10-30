@@ -1,17 +1,80 @@
 # Real Estate Investment Advisor
 
-Streamlit application for exploring the supplied housing data, applying a price-based investment screen and comparing assumed five-year price scenarios.
+A capstone implementation based on both supplied Real Estate Investment Advisor briefs. It includes full data preparation, twenty EDA analyses, investment classification, five-year price regression, MLflow tracking and registration, and a Streamlit app.
 
-## Run locally
+Five-year targets are synthetic fixed-rate scenarios at the brief's example 8 percent annual growth. Classification imitates the allowed training-cohort median price rule. Strong scores measure agreement with these formula-based labels, not observed market forecasts or realized profits.
 
-Use Python 3.12 and install `requirements.txt`, then run `streamlit run app.py`.
+## Run the included app
 
-## Deployment
+Use Python 3.12, matching the verified environment:
 
-Choose this repository in Streamlit Community Cloud, use `app.py` as the entrypoint and select Python 3.12. The data and fitted models are included; training is not required for launch. Cloud installation and resource compatibility must be verified during deployment.
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m streamlit run app.py
+```
 
-## Interpretation
+Data and models are included; retraining is not needed to launch. Use only trusted model artifacts from this project.
 
-The classifier evaluates a median-price proxy, not actual profitability. Test accuracy was approximately 71.3%. Regression did not beat a median-price baseline. Five-year values are calculated from an editable assumed growth rate, not observed future prices. Source fields contain physical inconsistencies documented in the app. No historical return, calibrated profit probability or net investment return is claimed.
+## Reproduce all phases
 
-This repository contains the running app assets. The complete project submission separately includes the original briefs, raw CSV, analysis scripts and experiment records. No data license is invented by this project.
+```sh
+.venv/bin/python src/phase1_audit.py
+.venv/bin/python src/phase2_eda.py
+.venv/bin/python src/phase2_enrich.py
+.venv/bin/python src/phase3_train.py
+.venv/bin/python src/phase6_verify.py
+.venv/bin/python src/export_experiments.py
+.venv/bin/python src/write_report.py
+.venv/bin/python src/package_submission.py
+```
+
+The 60/20/20 split uses seed 42. Preprocessing and city/type medians are fitted only on training rows. Validation selects candidates and test data supplies final metrics. All original source values remain unchanged; inconsistent floors and outliers are flagged. Price per square foot is recomputed in rupees, and ages retain the source reference year 2025.
+
+## Targets
+
+`Future_Price_5Y = Price_in_Lakhs * 1.08 ** 5`. Regression legitimately includes current price when learning this assumed future-price formula. No historical price appreciation is inferred. The app shows the learned eight-percent prediction and a separate editable-rate scenario.
+
+`Good_Investment = asking_price_per_sqft <= training_city_type_median`. The classifier receives the price-to-median ratio and deliberately imitates this rule. It displays its own Yes/No result and probability separately from the directly computed rule. The probability is uncalibrated and is not the chance of a profitable investment. These target definitions are permitted alternatives in the DS AI ML brief; they do not constitute independent financial validation.
+
+## Analysis and experiment records
+
+- [Current methodology and findings](reports/project_report.md)
+- [All twenty EDA questions with explanations and visuals](reports/eda_findings.md)
+- [Requirement status and outstanding dependencies](reports/requirements_status.json)
+- [Verification results](reports/verification.json)
+- [Deployment and demonstration](DEPLOYMENT.md)
+- `data/processed/model_targets.csv`: split assignment and labeled targets for every property.
+- `experiments/manifest.json`: portable run parameters, metrics, original IDs and model locations.
+
+Restore the exported current experiments on any compatible machine:
+
+```sh
+.venv/bin/python src/restore_experiments.py
+.venv/bin/python -m mlflow ui --backend-store-uri sqlite:///restored_mlflow.db
+```
+
+Or inspect newly trained local experiments with `mlflow ui --backend-store-uri sqlite:///mlflow.db`. The original machine's database is not required by the app or the portable restoration.
+
+## Data dependencies and completion status
+
+No transaction dates, observed returns, crime rates, defined infrastructure scores or geographic coordinates were supplied. Historical trends, crime effects and actual infrastructure/resale relationships remain blocked on additional data. The top-locality chart is an assumed projection and the location heatmap aggregates categories rather than inventing coordinates. No geographic school density is claimed. The documents provide no numerical cutoff for high accuracy or low RMSE. Synthetic-target scores must not be presented as proof of investment forecasting skill.
+
+Public hosting is separate from local functionality and GitHub publication. It requires Streamlit sign-in and verification of a real public app URL. The acceptance register lists these dependencies explicitly; the project does not claim 100 percent completion while they remain open.
+
+## Ten day delivery plan
+
+| Day | Work |
+|---|---|
+| 1 | Read briefs and audit schema and units |
+| 2 | Prepare data, flags and features |
+| 3 | EDA price, size and location questions |
+| 4 | EDA amenities, services, ownership and limitations |
+| 5 | Define assumed targets and split data |
+| 6 | Train and evaluate classification and regression |
+| 7 | MLflow tracking, registry and portable exports |
+| 8 | Streamlit inputs, filters and analysis views |
+| 9 | Verify calculations, app interactions and artifacts |
+| 10 | Complete GitHub handover, hosting and demonstration |
+
+This is the briefs' requested planning framework, not a fabricated record of ten elapsed days. No dataset redistribution license is invented.

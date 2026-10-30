@@ -1,0 +1,17 @@
+{
+  "data_integrity": "passed",
+  "future_target_formula": "passed",
+  "training_only_cohort_thresholds": "passed",
+  "independent_heldout_metrics": "passed",
+  "unknown_cohort_and_boundary_checks": "passed",
+  "eda_tables": 20,
+  "eda_explanations_and_visuals": 20,
+  "finished_aligned_mlflow_runs": 6,
+  "selected_registry_aliases": "passed",
+  "app_load_filter_assessment": "passed",
+  "model_classification_display": "passed",
+  "regression_changes_with_asking_price": "passed",
+  "zero_growth_scenario": "passed",
+  "public_hosting": "pending sign-in",
+  "unsupported_real_world_analyses": "blocked on missing data"
+}

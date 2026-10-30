@@ -1,0 +1,87 @@
+[
+  {
+    "requirement": "Preprocessing and feature engineering",
+    "status": "implemented",
+    "evidence_or_next_step": "Full-source audit, imputation pipelines, scaling, encoding, corrected units, amenity features and outlier flags."
+  },
+  {
+    "requirement": "Good Investment classification",
+    "status": "implemented",
+    "evidence_or_next_step": "Median price-per-square-foot target from training cohorts; learned Yes/No and probability displayed separately from exact rule."
+  },
+  {
+    "requirement": "Future_Price_5Y regression",
+    "status": "implemented_assumed_target",
+    "evidence_or_next_step": "Future_Price_5Y = current price \u00d7 1.08^5. Current price is a valid predictor for this synthetic target."
+  },
+  {
+    "requirement": "Classification and regression evaluation",
+    "status": "implemented_assumed_targets",
+    "evidence_or_next_step": "Accuracy precision recall F1 ROC AUC confusion matrix; RMSE MAE R\u00b2. Scores measure rule/formula reproduction only."
+  },
+  {
+    "requirement": "MLflow experiment comparison and registry",
+    "status": "implemented",
+    "evidence_or_next_step": "Six aligned runs, candidate artifacts, selected aliases, portable export and restoration scripts."
+  },
+  {
+    "requirement": "Twenty numbered EDA questions",
+    "status": "implemented_except_historical_trends",
+    "evidence_or_next_step": "Twenty tables, twenty visuals and interpretations. Question 10 includes locality rankings and explicitly assumed projected paths, not observed history."
+  },
+  {
+    "requirement": "Streamlit inputs filters insights confidence and importance",
+    "status": "implemented",
+    "evidence_or_next_step": "Four tabs, city/price/BHK/area filters, classification and regression, uncalibrated proxy probability, confusion matrix and feature importance."
+  },
+  {
+    "requirement": "Location heatmap",
+    "status": "implemented",
+    "evidence_or_next_step": "Aggregate city by property-type median price heatmap; no invented coordinates."
+  },
+  {
+    "requirement": "Historical city/locality price trends",
+    "status": "blocked_missing_data",
+    "evidence_or_next_step": "Requires dated comparable price observations."
+  },
+  {
+    "requirement": "Area versus investment return",
+    "status": "blocked_missing_data",
+    "evidence_or_next_step": "Requires observed purchase/resale values, dates, rent and costs."
+  },
+  {
+    "requirement": "Crime versus investment classification",
+    "status": "blocked_missing_data",
+    "evidence_or_next_step": "Requires geographic crime rates for the relevant reporting period."
+  },
+  {
+    "requirement": "Infrastructure versus resale value",
+    "status": "blocked_missing_data",
+    "evidence_or_next_step": "Requires defined infrastructure scores and observed resale values."
+  },
+  {
+    "requirement": "High accuracy and low RMSE",
+    "status": "demonstrated_only_for_synthetic_rules",
+    "evidence_or_next_step": "Numerical results are reported below; briefs provide no cutoff and observed return forecasting skill is not established."
+  },
+  {
+    "requirement": "Complete version controlled project",
+    "status": "prepared_for_publication",
+    "evidence_or_next_step": "Code, data, reports and portable experiment export are prepared; publication receipt separately records the verified GitHub commit."
+  },
+  {
+    "requirement": "Public Streamlit hosting",
+    "status": "pending_browser_sign_in",
+    "evidence_or_next_step": "User must complete the existing GitHub/Streamlit sign-in before deployment can be verified."
+  },
+  {
+    "requirement": "Project documentation and use cases",
+    "status": "implemented",
+    "evidence_or_next_step": "README, methodology, EDA findings, data gaps, deployment guide, demo and verification."
+  },
+  {
+    "requirement": "Ten day timeline",
+    "status": "documented_plan",
+    "evidence_or_next_step": "README includes a ten-day delivery plan; external evaluation acceptance is not guaranteed."
+  }
+]

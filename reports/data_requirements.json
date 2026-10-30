@@ -1,0 +1,22 @@
+[
+  {
+    "requirement": "Historical city and locality price trends",
+    "status": "blocked_missing_data",
+    "needed": "Dated observations of prices for comparable property cohorts"
+  },
+  {
+    "requirement": "Area versus realized investment return",
+    "status": "blocked_missing_data",
+    "needed": "Purchase and resale prices, dates, income and costs"
+  },
+  {
+    "requirement": "Crime versus investment classification",
+    "status": "blocked_missing_data",
+    "needed": "Crime rates with verified geography and reporting period"
+  },
+  {
+    "requirement": "Infrastructure score versus resale value",
+    "status": "blocked_missing_data",
+    "needed": "Defined infrastructure scores and observed resale prices"
+  }
+]

@@ -1,0 +1,212 @@
+{
+  "experiment_name": "Real Estate Brief Aligned Assumed Targets",
+  "target_warning": "Synthetic future prices and rule labels; scores are not real investment accuracy.",
+  "runs": [
+    {
+      "original_run_id": "3733504b3d7f4397b3616297022a878b",
+      "name": "brief_aligned_regression_median_baseline",
+      "params": {
+        "task": "regression",
+        "model": "median_baseline",
+        "seed": "42",
+        "train_rows": "150000",
+        "validation_rows": "50000",
+        "test_rows": "50000",
+        "target": "Future_Price_5Y",
+        "target_kind": "assumption_based",
+        "annual_rate": "0.08",
+        "constant": "None",
+        "quantile": "None",
+        "strategy": "median"
+      },
+      "metrics": {
+        "mae": 179.72057983960764,
+        "rmse": 207.46153362227486,
+        "r2": -2.3854829735547867e-05,
+        "validation_selection_score": -207.39351196395808
+      },
+      "model_path": "regression_median_baseline",
+      "selected": false
+    },
+    {
+      "original_run_id": "eb33f6f5e82443d0ae08a1fc44e1fd2b",
+      "name": "brief_aligned_regression_linear",
+      "params": {
+        "task": "regression",
+        "model": "linear",
+        "seed": "42",
+        "train_rows": "150000",
+        "validation_rows": "50000",
+        "test_rows": "50000",
+        "target": "Future_Price_5Y",
+        "target_kind": "assumption_based",
+        "annual_rate": "0.08",
+        "copy_X": "True",
+        "fit_intercept": "True",
+        "n_jobs": "None",
+        "positive": "False",
+        "tol": "1e-10"
+      },
+      "metrics": {
+        "mae": 4.725685277396252e-08,
+        "rmse": 5.8077113159798454e-08,
+        "r2": 1.0,
+        "validation_selection_score": -5.808973678862424e-08
+      },
+      "model_path": "regression_linear",
+      "selected": true
+    },
+    {
+      "original_run_id": "d687c9ee2a8747f5845dbde50140c9c2",
+      "name": "brief_aligned_regression_forest",
+      "params": {
+        "task": "regression",
+        "model": "forest",
+        "seed": "42",
+        "train_rows": "150000",
+        "validation_rows": "50000",
+        "test_rows": "50000",
+        "target": "Future_Price_5Y",
+        "target_kind": "assumption_based",
+        "annual_rate": "0.08",
+        "bootstrap": "True",
+        "ccp_alpha": "0.0",
+        "criterion": "squared_error",
+        "max_depth": "12",
+        "max_features": "1.0",
+        "max_leaf_nodes": "None",
+        "max_samples": "None",
+        "min_impurity_decrease": "0.0",
+        "min_samples_leaf": "10",
+        "min_samples_split": "2",
+        "min_weight_fraction_leaf": "0.0",
+        "monotonic_cst": "None",
+        "n_estimators": "40",
+        "n_jobs": "2",
+        "oob_score": "False",
+        "random_state": "42",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "metrics": {
+        "mae": 0.011457372042994407,
+        "rmse": 0.014383673975767793,
+        "r2": 0.9999999951929919,
+        "validation_selection_score": -0.014584636726438322
+      },
+      "model_path": "regression_forest",
+      "selected": false
+    },
+    {
+      "original_run_id": "659c1a0507674049957194c7e71a6a89",
+      "name": "brief_aligned_classification_majority_baseline",
+      "params": {
+        "task": "classification",
+        "model": "majority_baseline",
+        "seed": "42",
+        "train_rows": "150000",
+        "validation_rows": "50000",
+        "test_rows": "50000",
+        "target": "Good_Investment",
+        "target_kind": "rule_imitation",
+        "annual_rate": "0.08",
+        "constant": "None",
+        "random_state": "None",
+        "strategy": "most_frequent"
+      },
+      "metrics": {
+        "accuracy": 0.49962,
+        "precision": 0.49962,
+        "recall": 1.0,
+        "f1": 0.6663288032968352,
+        "roc_auc": 0.5,
+        "validation_selection_score": 0.6692040509428689
+      },
+      "model_path": "classification_majority_baseline",
+      "selected": false
+    },
+    {
+      "original_run_id": "8d66d449707d4466af5c757e9a89662f",
+      "name": "brief_aligned_classification_logistic",
+      "params": {
+        "task": "classification",
+        "model": "logistic",
+        "seed": "42",
+        "train_rows": "150000",
+        "validation_rows": "50000",
+        "test_rows": "50000",
+        "target": "Good_Investment",
+        "target_kind": "rule_imitation",
+        "annual_rate": "0.08",
+        "C": "100",
+        "class_weight": "None",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "0.0",
+        "max_iter": "500",
+        "n_jobs": "None",
+        "penalty": "deprecated",
+        "random_state": "None",
+        "solver": "lbfgs",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "metrics": {
+        "accuracy": 0.9988,
+        "precision": 0.9984798175781093,
+        "recall": 0.9991193306913254,
+        "f1": 0.9987994717675778,
+        "roc_auc": 0.9999956895975104,
+        "validation_selection_score": 0.99924438258103
+      },
+      "model_path": "classification_logistic",
+      "selected": false
+    },
+    {
+      "original_run_id": "1d4daf7a251545ef9e18d49e456f9b8f",
+      "name": "brief_aligned_classification_forest",
+      "params": {
+        "task": "classification",
+        "model": "forest",
+        "seed": "42",
+        "train_rows": "150000",
+        "validation_rows": "50000",
+        "test_rows": "50000",
+        "target": "Good_Investment",
+        "target_kind": "rule_imitation",
+        "annual_rate": "0.08",
+        "bootstrap": "True",
+        "ccp_alpha": "0.0",
+        "class_weight": "None",
+        "criterion": "gini",
+        "max_depth": "10",
+        "max_features": "sqrt",
+        "max_leaf_nodes": "None",
+        "max_samples": "None",
+        "min_impurity_decrease": "0.0",
+        "min_samples_leaf": "3",
+        "min_samples_split": "2",
+        "min_weight_fraction_leaf": "0.0",
+        "monotonic_cst": "None",
+        "n_estimators": "40",
+        "n_jobs": "2",
+        "oob_score": "False",
+        "random_state": "42",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "validation_selection_score": 1.0
+      },
+      "model_path": "classification_forest",
+      "selected": true
+    }
+  ]
+}

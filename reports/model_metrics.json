@@ -2,40 +2,48 @@
   {
     "task": "regression",
     "model": "median_baseline",
-    "mae": 122.3148068,
-    "rmse": 141.19483381417325,
-    "r2": -2.3854829735325822e-05,
-    "validation_selection_score": -141.14853941648846,
-    "run_id": "3f3eac9ebd5d4c07861e11f4205ec48e"
+    "target": "Future_Price_5Y",
+    "evaluation_kind": "assumption_based",
+    "mae": 179.72057983960764,
+    "rmse": 207.46153362227486,
+    "r2": -2.3854829735547867e-05,
+    "validation_selection_score": -207.39351196395808,
+    "run_id": "3733504b3d7f4397b3616297022a878b"
   },
   {
     "task": "regression",
-    "model": "ridge",
-    "mae": 122.31790501787799,
-    "rmse": 141.20888115749034,
-    "r2": -0.00022284762330770924,
-    "validation_selection_score": -141.18768070384695,
-    "run_id": "a28512e7c66049d69b0e978784d7e583"
+    "model": "linear",
+    "target": "Future_Price_5Y",
+    "evaluation_kind": "assumption_based",
+    "mae": 4.725685277396252e-08,
+    "rmse": 5.8077113159798454e-08,
+    "r2": 1.0,
+    "validation_selection_score": -5.808973678862424e-08,
+    "run_id": "eb33f6f5e82443d0ae08a1fc44e1fd2b"
   },
   {
     "task": "regression",
     "model": "forest",
-    "mae": 122.36032818074577,
-    "rmse": 141.2405204168302,
-    "r2": -0.00067111766340755,
-    "validation_selection_score": -141.19207323357875,
-    "run_id": "d577eb1ae6544243babdf177a76b94b3"
+    "target": "Future_Price_5Y",
+    "evaluation_kind": "assumption_based",
+    "mae": 0.011457372042994407,
+    "rmse": 0.014383673975767793,
+    "r2": 0.9999999951929919,
+    "validation_selection_score": -0.014584636726438322,
+    "run_id": "d687c9ee2a8747f5845dbde50140c9c2"
   },
   {
     "task": "classification",
     "model": "majority_baseline",
+    "target": "Good_Investment",
+    "evaluation_kind": "rule_imitation",
     "accuracy": 0.49962,
     "precision": 0.49962,
     "recall": 1.0,
     "f1": 0.6663288032968352,
     "roc_auc": 0.5,
     "validation_selection_score": 0.6692040509428689,
-    "run_id": "3151b6335a2345f2bbf2cd86953b99a1",
+    "run_id": "659c1a0507674049957194c7e71a6a89",
     "confusion_matrix": [
       [
         0,
@@ -50,42 +58,46 @@
   {
     "task": "classification",
     "model": "logistic",
-    "accuracy": 0.71268,
-    "precision": 0.7111597374179431,
-    "recall": 0.7155438132981066,
-    "f1": 0.7133450395083406,
-    "roc_auc": 0.7852309847494168,
-    "validation_selection_score": 0.7159480353869451,
-    "run_id": "57ed4268740e420e8511b4f5ce03cdf0",
+    "target": "Good_Investment",
+    "evaluation_kind": "rule_imitation",
+    "accuracy": 0.9988,
+    "precision": 0.9984798175781093,
+    "recall": 0.9991193306913254,
+    "f1": 0.9987994717675778,
+    "roc_auc": 0.9999956895975104,
+    "validation_selection_score": 0.99924438258103,
+    "run_id": "8d66d449707d4466af5c757e9a89662f",
     "confusion_matrix": [
       [
-        17759,
-        7260
+        24981,
+        38
       ],
       [
-        7106,
-        17875
+        22,
+        24959
       ]
     ]
   },
   {
     "task": "classification",
     "model": "forest",
-    "accuracy": 0.71268,
-    "precision": 0.7037975655646431,
-    "recall": 0.7337176253953004,
-    "f1": 0.7184462213860144,
-    "roc_auc": 0.7774855242756389,
-    "validation_selection_score": 0.7203212222113408,
-    "run_id": "9cdc68b71e1e40928029f5b5c774bd3b",
+    "target": "Good_Investment",
+    "evaluation_kind": "rule_imitation",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "validation_selection_score": 1.0,
+    "run_id": "1d4daf7a251545ef9e18d49e456f9b8f",
     "confusion_matrix": [
       [
-        17305,
-        7714
+        25019,
+        0
       ],
       [
-        6652,
-        18329
+        0,
+        24981
       ]
     ]
   }

@@ -1,0 +1,122 @@
+{
+  "01_price_distribution": {
+    "title": "Price Distribution",
+    "interpretation": "The table reports count, spread and percentiles. The overview chart shows the full distribution.",
+    "table": "01_price_distribution.csv",
+    "chart": "01_price_distribution.png"
+  },
+  "02_size_distribution": {
+    "title": "Size Distribution",
+    "interpretation": "The table reports count, spread and percentiles. The overview chart shows the full distribution.",
+    "table": "02_size_distribution.csv",
+    "chart": "02_size_distribution.png"
+  },
+  "03_price_per_sqft_by_type": {
+    "title": "Price Per Sqft By Type",
+    "interpretation": "Across 3 reported groups, mean ranges from 13,025.61 to 13,102.05. Highest group: Independent House. Compare sample counts before interpreting differences.",
+    "table": "03_price_per_sqft_by_type.csv",
+    "chart": "03_price_per_sqft_by_type.png"
+  },
+  "04_size_price_correlation": {
+    "title": "Size Price Correlation",
+    "interpretation": "The area-price correlation is approximately -0.0025, showing almost no linear association in this dataset.",
+    "table": "04_size_price_correlation.csv",
+    "chart": "04_size_price_correlation.png"
+  },
+  "05_outliers": {
+    "title": "Outliers",
+    "interpretation": "Across 3 reported groups, count ranges from 0.00 to 116,304.00. Highest group: Flag_Floor_Above_Total. Compare sample counts before interpreting differences. IQR flags are statistical diagnostics, not automatic deletion rules. Floor inconsistencies are separate physical checks.",
+    "table": "05_outliers.csv",
+    "chart": "05_outliers.png"
+  },
+  "06_state_price_per_sqft": {
+    "title": "State Price Per Sqft",
+    "interpretation": "Across 20 reported groups, mean ranges from 12,931.49 to 13,252.20. Highest group: Karnataka. Compare sample counts before interpreting differences.",
+    "table": "06_state_price_per_sqft.csv",
+    "chart": "06_state_price_per_sqft.png"
+  },
+  "07_city_price": {
+    "title": "City Price",
+    "interpretation": "Across 42 reported groups, mean ranges from 250.79 to 258.46. Highest group: Bangalore. Compare sample counts before interpreting differences.",
+    "table": "07_city_price.csv",
+    "chart": "07_city_price.png"
+  },
+  "08_locality_age": {
+    "title": "Locality Age",
+    "interpretation": "Across 20,999 reported groups, median ranges from 3.00 to 34.50. Highest group: Karnataka / Mysore / Locality_444. Compare sample counts before interpreting differences.",
+    "table": "08_locality_age.csv",
+    "chart": "08_locality_age.png"
+  },
+  "09_city_bhk": {
+    "title": "City Bhk",
+    "interpretation": "The crosstab compares bedroom counts within cities. Counts reflect the supplied sample rather than city housing inventory.",
+    "table": "09_city_bhk.csv",
+    "chart": "09_city_bhk.png"
+  },
+  "10_expensive_localities": {
+    "title": "Expensive Localities",
+    "interpretation": "Across 5 reported groups, mean ranges from 392.12 to 396.86. Highest group: Maharashtra / Pune / Locality_253. Compare sample counts before interpreting differences. These are the five highest mean-price locality groups with at least ten records. No observed dates are available; projected trends are assumption-based, not historical.",
+    "table": "10_expensive_localities.csv",
+    "chart": "10_expensive_localities.png"
+  },
+  "11_numeric_correlations": {
+    "title": "Numeric Correlations",
+    "interpretation": "Correlation describes association. Corrected price per square foot is mechanically derived from price and size. Constant columns can have undefined correlations.",
+    "table": "11_numeric_correlations.csv",
+    "chart": "11_numeric_correlations.png"
+  },
+  "12_schools": {
+    "title": "Schools",
+    "interpretation": "Across 10 reported groups, mean ranges from 12,888.08 to 13,292.36. Highest group: 6.0. Compare sample counts before interpreting differences. Group differences do not prove a causal effect on prices.",
+    "table": "12_schools.csv",
+    "chart": "12_schools.png"
+  },
+  "13_hospitals": {
+    "title": "Hospitals",
+    "interpretation": "Across 10 reported groups, mean ranges from 12,917.02 to 13,256.91. Highest group: 7.0. Compare sample counts before interpreting differences. Group differences do not prove a causal effect on prices.",
+    "table": "13_hospitals.csv",
+    "chart": "13_hospitals.png"
+  },
+  "14_furnishing": {
+    "title": "Furnishing",
+    "interpretation": "Across 3 reported groups, mean ranges from 254.33 to 254.98. Highest group: Unfurnished. Compare sample counts before interpreting differences. Group differences do not prove a causal effect on prices.",
+    "table": "14_furnishing.csv",
+    "chart": "14_furnishing.png"
+  },
+  "15_facing": {
+    "title": "Facing",
+    "interpretation": "Across 4 reported groups, mean ranges from 13,023.70 to 13,140.02. Highest group: West. Compare sample counts before interpreting differences. Group differences do not prove a causal effect on prices.",
+    "table": "15_facing.csv",
+    "chart": "15_facing.png"
+  },
+  "16_owner": {
+    "title": "Owner",
+    "interpretation": "Across 3 reported groups, count ranges from 83,253.00 to 83,479.00. Highest group: Broker. Compare sample counts before interpreting differences.",
+    "table": "16_owner.csv",
+    "chart": "16_owner.png"
+  },
+  "17_availability": {
+    "title": "Availability",
+    "interpretation": "Across 2 reported groups, count ranges from 124,965.00 to 125,035.00. Highest group: Under_Construction. Compare sample counts before interpreting differences.",
+    "table": "17_availability.csv",
+    "chart": "17_availability.png"
+  },
+  "18_parking": {
+    "title": "Parking",
+    "interpretation": "Across 2 reported groups, mean ranges from 254.43 to 254.75. Highest group: Yes. Compare sample counts before interpreting differences. Group differences do not prove a causal effect on prices.",
+    "table": "18_parking.csv",
+    "chart": "18_parking.png"
+  },
+  "19_amenities": {
+    "title": "Amenities",
+    "interpretation": "Across 31 reported groups, mean ranges from 12,703.07 to 13,446.07. Highest group: Garden, Gym. Compare sample counts before interpreting differences. Group differences do not prove a causal effect on prices.",
+    "table": "19_amenities.csv",
+    "chart": "19_amenities.png"
+  },
+  "20_transport": {
+    "title": "Transport",
+    "interpretation": "Across 3 reported groups, mean ranges from 13,027.24 to 13,085.54. Highest group: Low. Compare sample counts before interpreting differences. Group differences do not prove a causal effect on prices.",
+    "table": "20_transport.csv",
+    "chart": "20_transport.png"
+  }
+}

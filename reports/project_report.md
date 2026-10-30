@@ -1,0 +1,90 @@
+# Real Estate Investment Advisor methodology and findings
+
+This project follows the supplied briefs using their permitted fixed-rate future-price target and price-median classification definition. It provides analysis, models, MLflow experiments and a Streamlit interface. Missing real-world data and pending public hosting prevent a truthful claim of 100 percent completion.
+
+## Data and preprocessing
+
+The source has 250,000 properties and 23 columns. No missing values or duplicate records were found. All original values are preserved. INR price per sq ft is recomputed; floor inconsistencies and statistical outliers are flagged. Ages imply the source year 2025. Amenity strings are normalized and counted. School count per property area is not claimed to be geographic school density.
+
+Numeric imputation and scaling and categorical imputation/one-hot encoding are fitted on training records. A deterministic seed 42 split allocates 150,000 training, 50,000 validation and 50,000 test records. City/type median thresholds are calculated only on training rows. Identifiers, unreliable floor fields and generic locality labels are not model predictors.
+
+## Target definitions and interpretation
+
+Future_Price_5Y = Price_in_Lakhs × (1.08)^5. The 8 percent rate is the example assumption expressly permitted by the DS AI ML brief. It is not estimated from market history. Regression uses current asking price plus property characteristics to learn this synthetic formula. Consequently very small errors are expected and do not establish future market forecasting accuracy. The editable growth-rate chart is a separate direct calculation.
+
+Good_Investment = 1 when asking price per sq ft is at or below the training city/property-type median. The classifier includes the price-to-cohort-median ratio and imitates this known deterministic definition. Its accuracy measures agreement with that rule, not a discovered relationship with realized profitability. The displayed model decision and exact rule are separately labeled. Probability calibration has not been established.
+
+## Model comparisons
+
+Three candidates per task are compared: dummy baseline, linear/logistic and random forest. Validation RMSE selects regression and validation F1 selects classification. Test metrics are reported independently.
+
+| Task | Model | Target | Held out results |
+|---|---|---|---|
+| regression | median_baseline | Future_Price_5Y | RMSE 207.461533622 lakhs; MAE 179.720579840; R² -0.000024 |
+| regression | linear | Future_Price_5Y | RMSE 0.000000058 lakhs; MAE 0.000000047; R² 1.000000 |
+| regression | forest | Future_Price_5Y | RMSE 0.014383674 lakhs; MAE 0.011457372; R² 1.000000 |
+| classification | majority_baseline | Good_Investment | Accuracy 49.9620%; precision 0.49962; recall 1.00000; F1 0.66633; ROC AUC 0.50000 |
+| classification | logistic | Good_Investment | Accuracy 99.8800%; precision 0.99848; recall 0.99912; F1 0.99880; ROC AUC 1.00000 |
+| classification | forest | Good_Investment | Accuracy 100.0000%; precision 1.00000; recall 1.00000; F1 1.00000; ROC AUC 1.00000 |
+
+Selected regression: linear. Selected classification: forest.
+
+## Exploratory analysis
+
+[All twenty questions with interpretations and visuals](eda_findings.md). The app includes the same tables and downloadable complete results, a city/type heatmap and top-locality projected scenarios. Static group differences are not causal effects or historical trends. Nearly uniform prices and almost zero size-price association suggest weak structure in this supplied sample; no claim is made about the overall Indian housing market.
+
+## MLflow and reproducibility
+
+The current experiment logs model hyperparameters, metrics and candidate models. Selected registry models have a selected alias. Portable exports include six run records and their model artifacts in experiments/. Run src/restore_experiments.py to recreate an independent local registry after download. Historical original experiments remain in the local database.
+
+## Business use cases
+
+An investor or buyer can filter listings, compare asking price against a cohort and explore assumed future prices. A listing company can demonstrate consistent price screening and inspect model metrics. These uses support an educational workflow; the supplied data does not validate high-return purchase selection, customer trust improvements or financial profitability. Transaction costs, rents, borrowing, taxes and maintenance are not supplied.
+
+## Application and verification
+
+The app separates model classification, direct screening and future-value scenarios. Tests cover target formulas, split independence, training-only thresholds, independent test metrics, feature inference, unknown cohorts, extreme-price classifications, EDA coverage, registry selection, city filters, assessment, zero growth and regression response to asking-price edits.
+
+{
+  "data_integrity": "passed",
+  "future_target_formula": "passed",
+  "training_only_cohort_thresholds": "passed",
+  "independent_heldout_metrics": "passed",
+  "unknown_cohort_and_boundary_checks": "passed",
+  "eda_tables": 20,
+  "eda_explanations_and_visuals": 20,
+  "finished_aligned_mlflow_runs": 6,
+  "selected_registry_aliases": "passed",
+  "app_load_filter_assessment": "passed",
+  "model_classification_display": "passed",
+  "regression_changes_with_asking_price": "passed",
+  "zero_growth_scenario": "passed",
+  "public_hosting": "pending sign-in",
+  "unsupported_real_world_analyses": "blocked on missing data"
+}
+
+## Requirement acceptance register
+
+| Requirement | Status | Evidence or next step |
+|---|---|---|
+| Preprocessing and feature engineering | implemented | Full-source audit, imputation pipelines, scaling, encoding, corrected units, amenity features and outlier flags. |
+| Good Investment classification | implemented | Median price-per-square-foot target from training cohorts; learned Yes/No and probability displayed separately from exact rule. |
+| Future_Price_5Y regression | implemented_assumed_target | Future_Price_5Y = current price × 1.08^5. Current price is a valid predictor for this synthetic target. |
+| Classification and regression evaluation | implemented_assumed_targets | Accuracy precision recall F1 ROC AUC confusion matrix; RMSE MAE R². Scores measure rule/formula reproduction only. |
+| MLflow experiment comparison and registry | implemented | Six aligned runs, candidate artifacts, selected aliases, portable export and restoration scripts. |
+| Twenty numbered EDA questions | implemented_except_historical_trends | Twenty tables, twenty visuals and interpretations. Question 10 includes locality rankings and explicitly assumed projected paths, not observed history. |
+| Streamlit inputs filters insights confidence and importance | implemented | Four tabs, city/price/BHK/area filters, classification and regression, uncalibrated proxy probability, confusion matrix and feature importance. |
+| Location heatmap | implemented | Aggregate city by property-type median price heatmap; no invented coordinates. |
+| Historical city/locality price trends | blocked_missing_data | Requires dated comparable price observations. |
+| Area versus investment return | blocked_missing_data | Requires observed purchase/resale values, dates, rent and costs. |
+| Crime versus investment classification | blocked_missing_data | Requires geographic crime rates for the relevant reporting period. |
+| Infrastructure versus resale value | blocked_missing_data | Requires defined infrastructure scores and observed resale values. |
+| High accuracy and low RMSE | demonstrated_only_for_synthetic_rules | Numerical results are reported below; briefs provide no cutoff and observed return forecasting skill is not established. |
+| Complete version controlled project | prepared_for_publication | Code, data, reports and portable experiment export are prepared; publication receipt separately records the verified GitHub commit. |
+| Public Streamlit hosting | pending_browser_sign_in | User must complete the existing GitHub/Streamlit sign-in before deployment can be verified. |
+| Project documentation and use cases | implemented | README, methodology, EDA findings, data gaps, deployment guide, demo and verification. |
+| Ten day timeline | documented_plan | README includes a ten-day delivery plan; external evaluation acceptance is not guaranteed. |
+
+## Outstanding dependencies
+
+The supplied CSV contains no dated transactions, crime rates, defined infrastructure scores or realized returns. Those literal analyses cannot be completed by renaming construction year as a transaction date or inventing scores. Additional verified data or evaluator-approved exclusions are required. The sign-in page is awaiting the user; a public URL must be checked after hosting. A GitHub commit alone is not public app deployment.

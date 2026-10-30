@@ -1,0 +1,47 @@
+artifact_path: /Users/puransmac/Desktop/Labmentix Projects/Real Estate Investment
+  Advisor/mlruns/2/models/m-3fe1c1ccef904d3dbdde742404623538/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.14
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.1
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.17.2
+model_id: m-3fe1c1ccef904d3dbdde742404623538
+model_size_bytes: 8002
+model_uuid: m-3fe1c1ccef904d3dbdde742404623538
+prompts: null
+run_id: 8d66d449707d4466af5c757e9a89662f
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "BHK", "required": true}, {"type": "long", "name":
+    "Size_in_SqFt", "required": true}, {"type": "long", "name": "Age_of_Property",
+    "required": true}, {"type": "long", "name": "Nearby_Schools", "required": true},
+    {"type": "long", "name": "Nearby_Hospitals", "required": true}, {"type": "long",
+    "name": "Amenity_Count", "required": true}, {"type": "double", "name": "Price_to_Cohort_Median",
+    "required": true}, {"type": "string", "name": "State", "required": true}, {"type":
+    "string", "name": "City", "required": true}, {"type": "string", "name": "Property_Type",
+    "required": true}, {"type": "string", "name": "Furnished_Status", "required":
+    true}, {"type": "string", "name": "Public_Transport_Accessibility", "required":
+    true}, {"type": "string", "name": "Parking_Space", "required": true}, {"type":
+    "string", "name": "Security", "required": true}, {"type": "string", "name": "Facing",
+    "required": true}, {"type": "string", "name": "Owner_Type", "required": true},
+    {"type": "string", "name": "Availability_Status", "required": true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-10-30 15:45:02.599873'

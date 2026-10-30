@@ -1,0 +1,6 @@
+State,City,Locality,count,mean,median
+Maharashtra,Pune,Locality_253,10,396.856,445.245
+Bihar,Patna,Locality_116,12,396.1175,446.21500000000003
+Odisha,Bhubaneswar,Locality_362,10,395.981,422.88
+Karnataka,Mysore,Locality_153,11,394.30454545454546,416.3
+Uttar Pradesh,Lucknow,Locality_302,12,392.1225,421.95000000000005

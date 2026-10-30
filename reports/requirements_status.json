@@ -32,7 +32,7 @@
   {
     "requirement": "Streamlit inputs filters insights confidence and importance",
     "status": "implemented",
-    "evidence_or_next_step": "Four tabs, city/price/BHK/area filters, classification and regression, uncalibrated proxy probability, confusion matrix and feature importance."
+    "evidence_or_next_step": "Four workspaces, saved listing comparison, dependent state/city inputs, city/price/BHK/area filters, classification and regression, uncalibrated proxy probability, confusion matrix and feature importance."
   },
   {
     "requirement": "Location heatmap",

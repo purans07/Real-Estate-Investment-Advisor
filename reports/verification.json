@@ -12,7 +12,10 @@
   "model_classification_display": "passed",
   "regression_changes_with_asking_price": "passed",
   "zero_growth_scenario": "passed",
-  "public_hosting": "verified public dashboard and live assessment",
-  "unsupported_real_world_analyses": "blocked on missing data",
-  "public_app_url": "https://real-estate-investment-advisor-purans07.streamlit.app/"
+  "saved_listing_prefill": "passed",
+  "dependent_state_city_selection": "passed",
+  "persistent_assessment": "passed",
+  "all_four_workspaces": "passed",
+  "public_hosting": "see reports/public_deployment_check.json for separately verified public hosting",
+  "unsupported_real_world_analyses": "blocked on missing data"
 }

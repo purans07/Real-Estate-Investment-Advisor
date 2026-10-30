@@ -5,3 +5,6 @@ mlruns/
 mlartifacts/
 *.db
 submission/
+
+.streamlit/secrets.toml
+deployment/

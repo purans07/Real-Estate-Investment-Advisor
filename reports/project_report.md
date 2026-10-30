@@ -59,9 +59,12 @@ The app separates model classification, direct screening and future-value scenar
   "model_classification_display": "passed",
   "regression_changes_with_asking_price": "passed",
   "zero_growth_scenario": "passed",
-  "public_hosting": "verified public dashboard and live assessment",
-  "unsupported_real_world_analyses": "blocked on missing data",
-  "public_app_url": "https://real-estate-investment-advisor-purans07.streamlit.app/"
+  "saved_listing_prefill": "passed",
+  "dependent_state_city_selection": "passed",
+  "persistent_assessment": "passed",
+  "all_four_workspaces": "passed",
+  "public_hosting": "see reports/public_deployment_check.json for separately verified public hosting",
+  "unsupported_real_world_analyses": "blocked on missing data"
 }
 
 ## Requirement acceptance register
@@ -74,7 +77,7 @@ The app separates model classification, direct screening and future-value scenar
 | Classification and regression evaluation | implemented_assumed_targets | Accuracy precision recall F1 ROC AUC confusion matrix; RMSE MAE R². Scores measure rule/formula reproduction only. |
 | MLflow experiment comparison and registry | implemented | Six aligned runs, candidate artifacts, selected aliases, portable export and restoration scripts. |
 | Twenty numbered EDA questions | implemented_except_historical_trends | Twenty tables, twenty visuals and interpretations. Question 10 includes locality rankings and explicitly assumed projected paths, not observed history. |
-| Streamlit inputs filters insights confidence and importance | implemented | Four tabs, city/price/BHK/area filters, classification and regression, uncalibrated proxy probability, confusion matrix and feature importance. |
+| Streamlit inputs filters insights confidence and importance | implemented | Four workspaces, saved listing comparison, dependent state/city inputs, city/price/BHK/area filters, classification and regression, uncalibrated proxy probability, confusion matrix and feature importance. |
 | Location heatmap | implemented | Aggregate city by property-type median price heatmap; no invented coordinates. |
 | Historical city/locality price trends | blocked_missing_data | Requires dated comparable price observations. |
 | Area versus investment return | blocked_missing_data | Requires observed purchase/resale values, dates, rent and costs. |

@@ -12,7 +12,7 @@ def main():
     output=ROOT/'submission'
     output.mkdir(exist_ok=True)
     files=[]
-    for name in ['README.md','DEPLOYMENT.md','.gitignore','requirements.txt','app.py','india_housing_prices.csv','Project Title - Data Analyst, BA, FA.docx','Project Title-DS_AI_ML.docx','src','experiments','data/processed','models','reports','mlruns']:
+    for name in ['README.md','DEPLOYMENT.md','.gitignore','requirements.txt','assets','.streamlit/config.toml','app.py','india_housing_prices.csv','Project Title - Data Analyst, BA, FA.docx','Project Title-DS_AI_ML.docx','src','experiments','data/processed','models','reports','mlruns']:
         p=ROOT/name
         files.extend([p] if p.is_file() else [f for f in p.rglob('*') if f.is_file() and '__pycache__' not in f.parts])
     target=output/'real_estate_investment_advisor.zip'

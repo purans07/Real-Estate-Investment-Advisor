@@ -56,21 +56,42 @@ def main():
    model=mlflow.sklearn.load_model(str(ROOT/'experiments'/row['model_path']))
    fields=m[row['params']['task']+'_features'];assert len(model.predict(x[fields].head(2)))==2
  at=AppTest.from_file(str(ROOT/'app.py'),default_timeout=90).run();assert not at.exception,at.exception
- before=int(at.metric[0].value.replace(',',''));at.selectbox[0].select('Chennai').run();assert not at.exception
- assert int(at.metric[0].value.replace(',',''))<before
- at.selectbox(key='input_State').select('Tamil Nadu');at.selectbox(key='input_City').select('Chennai');at.button[0].click().run();assert not at.exception,at.exception
+ before=int(next(e.value for e in at.metric if e.label=='Matching properties').replace(',',''))
+ at.selectbox(key='filter_city').select('Chennai').run();assert not at.exception
+ assert int(next(e.value for e in at.metric if e.label=='Matching properties').replace(',',''))<before
+ # Save a genuine listing and open its prefilled assessment.
+ save_button=next(e for e in at.button if e.key and e.key.startswith('save_'))
+ pid=int(save_button.key.split('_')[1]);save_button.click().run();assert not at.exception
+ assert pid in at.session_state['saved_ids']
+ at.button(key='assess_'+str(pid)).click().run();assert not at.exception
+ assert at.radio(key='workspace').value=='Property desk'
+ assert at.selectbox(key='input_City').value=='Chennai'
+ assert at.number_input(key='asking_price').value==float(d.loc[d.ID==pid,'Price_in_Lakhs'].iloc[0])
+ # Dependent city selection prevents invalid state/city combinations.
+ at.selectbox(key='input_State').select('Gujarat').run();assert not at.exception
+ assert at.selectbox(key='input_City').value in d.loc[d.State=='Gujarat','City'].unique()
+ at.number_input(key='asking_price').set_value(200.0)
+ at.button(key='FormSubmitter:assessment-Build my assessment').click().run();assert not at.exception,at.exception
  assert at.session_state['assessment_completed']
  assert any('Model predicts Good Investment' in e.value for e in at.markdown)
  first=next(e.value for e in at.metric if 'Five-year scenario' in e.label)
- at.slider[2].set_value(0.0);at.button[0].click().run();assert not at.exception
+ at.slider(key='scenario_rate').set_value(0.0)
+ at.button(key='FormSubmitter:assessment-Build my assessment').click().run();assert not at.exception
  second=next(e.value for e in at.metric if 'Five-year scenario' in e.label)
  assert first!=second and second=='200.00'
- # Asking-price change must affect the future-price regression output.
  old=next(e.value for e in at.metric if 'Regression estimated' in e.label)
- next(e for e in at.number_input if e.label=='Asking price (INR lakhs)').set_value(300.0)
- at.button[0].click().run();assert not at.exception
+ at.number_input(key='asking_price').set_value(300.0)
+ at.button(key='FormSubmitter:assessment-Build my assessment').click().run();assert not at.exception
  new=next(e.value for e in at.metric if 'Regression estimated' in e.label);assert old!=new
- assert len(at.tabs)==4
- result={'data_integrity':'passed','future_target_formula':'passed','training_only_cohort_thresholds':'passed','independent_heldout_metrics':'passed','unknown_cohort_and_boundary_checks':'passed','eda_tables':20,'eda_explanations_and_visuals':20,'finished_aligned_mlflow_runs':run_count,'selected_registry_aliases':'passed','app_load_filter_assessment':'passed','model_classification_display':'passed','regression_changes_with_asking_price':'passed','zero_growth_scenario':'passed','public_hosting':'see reports/public_deployment_check.json for separately verified public hosting','unsupported_real_world_analyses':'blocked on missing data'}
+ at.radio(key='workspace').set_value('Market atlas').run();assert not at.exception,at.exception
+ at.selectbox(key='research_chapter').select('16–20 / Ownership & amenities').run();assert not at.exception
+ assert len(at.selectbox(key='eda_question_3').options)==5
+ at.radio(key='workspace').set_value('Method & evidence').run();assert not at.exception,at.exception
+ at.selectbox(key='metrics_task').select('Regression').run();assert not at.exception,at.exception
+ # Assessment survives navigation rather than disappearing on unrelated interactions.
+ at.radio(key='workspace').set_value('Property desk').run();assert not at.exception
+ assert at.session_state['assessment_result']['asking']==300.0
+ assert next(e.value for e in at.metric if 'Regression estimated' in e.label)==new
+ result={'data_integrity':'passed','future_target_formula':'passed','training_only_cohort_thresholds':'passed','independent_heldout_metrics':'passed','unknown_cohort_and_boundary_checks':'passed','eda_tables':20,'eda_explanations_and_visuals':20,'finished_aligned_mlflow_runs':run_count,'selected_registry_aliases':'passed','app_load_filter_assessment':'passed','model_classification_display':'passed','regression_changes_with_asking_price':'passed','zero_growth_scenario':'passed','saved_listing_prefill':'passed','dependent_state_city_selection':'passed','persistent_assessment':'passed','all_four_workspaces':'passed','public_hosting':'see reports/public_deployment_check.json for separately verified public hosting','unsupported_real_world_analyses':'blocked on missing data'}
  (ROOT/'reports/verification.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))
 if __name__=='__main__':main()

@@ -4,6 +4,12 @@ A capstone implementation based on both supplied Real Estate Investment Advisor 
 
 Five-year targets are synthetic fixed-rate scenarios at the brief's example 8 percent annual growth. Classification imitates the allowed training-cohort median price rule. Strong scores measure agreement with these formula-based labels, not observed market forecasts or realized profits.
 
+## Property Studio interface
+
+The app uses an editorial ivory and forest-green design with four workspaces: Discover, Property desk, Market atlas, and Method & evidence. Discover provides listing cards, saved comparisons and full-data downloads. Opening a listing prefills the assessment. State and city choices stay consistent, advanced details are collapsible, and results persist across navigation. All 20 EDA analyses and the original methodological disclosures remain available. Architectural drawings are illustrations, not actual listing photos. Saved listings are held only in the current browser session.
+
+Design assets are in `assets/` and the Streamlit theme is in `.streamlit/config.toml`. Both must be included when deploying.
+
 ## Run the included app
 
 Use Python 3.12, matching the verified environment:

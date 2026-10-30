@@ -1,6 +1,6 @@
 # Real Estate Investment Advisor methodology and findings
 
-This project follows the supplied briefs using their permitted fixed-rate future-price target and price-median classification definition. It provides analysis, models, MLflow experiments and a Streamlit interface. Missing real-world data and pending public hosting prevent a truthful claim of 100 percent completion.
+This project follows the supplied briefs using their permitted fixed-rate future-price target and price-median classification definition. It provides analysis, models, MLflow experiments and a Streamlit interface. Missing real-world data prevents a truthful claim of 100 percent completion. Public deployment and a live assessment have now been verified.
 
 ## Data and preprocessing
 
@@ -59,8 +59,9 @@ The app separates model classification, direct screening and future-value scenar
   "model_classification_display": "passed",
   "regression_changes_with_asking_price": "passed",
   "zero_growth_scenario": "passed",
-  "public_hosting": "pending sign-in",
-  "unsupported_real_world_analyses": "blocked on missing data"
+  "public_hosting": "verified public dashboard and live assessment",
+  "unsupported_real_world_analyses": "blocked on missing data",
+  "public_app_url": "https://real-estate-investment-advisor-purans07.streamlit.app/"
 }
 
 ## Requirement acceptance register
@@ -81,10 +82,10 @@ The app separates model classification, direct screening and future-value scenar
 | Infrastructure versus resale value | blocked_missing_data | Requires defined infrastructure scores and observed resale values. |
 | High accuracy and low RMSE | demonstrated_only_for_synthetic_rules | Numerical results are reported below; briefs provide no cutoff and observed return forecasting skill is not established. |
 | Complete version controlled project | published_to_github | Complete source, data, reports and portable experiments published; see publication_receipt.json for the verified implementation commit. |
-| Public Streamlit hosting | pending_browser_sign_in | User must complete the existing GitHub/Streamlit sign-in before deployment can be verified. |
+| Public Streamlit hosting | verified_public_deployment | Public dashboard and a live model assessment verified; see public_deployment_check.json. |
 | Project documentation and use cases | implemented | README, methodology, EDA findings, data gaps, deployment guide, demo and verification. |
 | Ten day timeline | documented_plan | README includes a ten-day delivery plan; external evaluation acceptance is not guaranteed. |
 
 ## Outstanding dependencies
 
-The user-provided Drive link was downloaded and verified byte-for-byte identical to the local CSV; linked_dataset_check.json records the schema and comparison. The supplied CSV contains no dated transactions, crime rates, defined infrastructure scores or realized returns. Those literal analyses cannot be completed by renaming construction year as a transaction date or inventing scores. Additional verified data or evaluator-approved exclusions are required. The sign-in page is awaiting the user; a public URL must be checked after hosting. A GitHub commit alone is not public app deployment.
+The user-provided Drive link was downloaded and verified byte-for-byte identical to the local CSV; linked_dataset_check.json records the schema and comparison. The supplied CSV contains no dated transactions, crime rates, defined infrastructure scores or realized returns. Those literal analyses cannot be completed by renaming construction year as a transaction date or inventing scores. Additional verified data or evaluator-approved exclusions are required. Public dashboard and live assessment verification are recorded in public_deployment_check.json.

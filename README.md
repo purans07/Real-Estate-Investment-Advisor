@@ -60,7 +60,7 @@ Or inspect newly trained local experiments with `mlflow ui --backend-store-uri s
 
 No transaction dates, observed returns, crime rates, defined infrastructure scores or geographic coordinates were supplied. Historical trends, crime effects and actual infrastructure/resale relationships remain blocked on additional data. The top-locality chart is an assumed projection and the location heatmap aggregates categories rather than inventing coordinates. No geographic school density is claimed. The documents provide no numerical cutoff for high accuracy or low RMSE. Synthetic-target scores must not be presented as proof of investment forecasting skill.
 
-Public hosting is separate from local functionality and GitHub publication. It requires Streamlit sign-in and verification of a real public app URL. The acceptance register lists these dependencies explicitly; the project does not claim 100 percent completion while they remain open.
+Public deployment is verified at [https://real-estate-investment-advisor-purans07.streamlit.app/](https://real-estate-investment-advisor-purans07.streamlit.app/). A live property assessment returned classification and five-year regression successfully; see reports/public_deployment_check.json. Missing real-world input data still prevents a 100 percent claim.
 
 ## Ten day delivery plan
 

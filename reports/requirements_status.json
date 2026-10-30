@@ -71,8 +71,8 @@
   },
   {
     "requirement": "Public Streamlit hosting",
-    "status": "pending_browser_sign_in",
-    "evidence_or_next_step": "User must complete the existing GitHub/Streamlit sign-in before deployment can be verified."
+    "status": "verified_public_deployment",
+    "evidence_or_next_step": "Public dashboard and a live model assessment verified; see public_deployment_check.json."
   },
   {
     "requirement": "Project documentation and use cases",

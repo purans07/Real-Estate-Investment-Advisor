@@ -1,6 +1,6 @@
 # Deploy the Real Estate Investment Advisor
 
-The app has been extended to the briefs’ assumed Future_Price_5Y target. Public hosting remains pending sign-in and verification. The submission ZIP includes source data, analysis outputs, trained models, experiment records and the application. Extract it before running commands.
+The app has been extended to the briefs’ assumed Future_Price_5Y target. Public hosting and a live assessment are verified at https://real-estate-investment-advisor-purans07.streamlit.app/ . The submission ZIP includes source data, analysis outputs, trained models, experiment records and the application. Extract it before running commands.
 
 ## Run the submitted app
 

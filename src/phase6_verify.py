@@ -71,6 +71,6 @@ def main():
  at.button[0].click().run();assert not at.exception
  new=next(e.value for e in at.metric if 'Regression estimated' in e.label);assert old!=new
  assert len(at.tabs)==4
- result={'data_integrity':'passed','future_target_formula':'passed','training_only_cohort_thresholds':'passed','independent_heldout_metrics':'passed','unknown_cohort_and_boundary_checks':'passed','eda_tables':20,'eda_explanations_and_visuals':20,'finished_aligned_mlflow_runs':run_count,'selected_registry_aliases':'passed','app_load_filter_assessment':'passed','model_classification_display':'passed','regression_changes_with_asking_price':'passed','zero_growth_scenario':'passed','public_hosting':'pending sign-in','unsupported_real_world_analyses':'blocked on missing data'}
+ result={'data_integrity':'passed','future_target_formula':'passed','training_only_cohort_thresholds':'passed','independent_heldout_metrics':'passed','unknown_cohort_and_boundary_checks':'passed','eda_tables':20,'eda_explanations_and_visuals':20,'finished_aligned_mlflow_runs':run_count,'selected_registry_aliases':'passed','app_load_filter_assessment':'passed','model_classification_display':'passed','regression_changes_with_asking_price':'passed','zero_growth_scenario':'passed','public_hosting':'see reports/public_deployment_check.json for separately verified public hosting','unsupported_real_world_analyses':'blocked on missing data'}
  (ROOT/'reports/verification.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))
 if __name__=='__main__':main()

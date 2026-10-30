@@ -1,0 +1,22 @@
+{
+  "url": "https://real-estate-investment-advisor-purans07.streamlit.app/",
+  "verification_date": "2026-10-30",
+  "dashboard_load": "passed",
+  "updated_four_tab_navigation": "passed",
+  "live_assessment": "passed",
+  "test_case": {
+    "State": "Gujarat",
+    "City": "Ahmedabad",
+    "Price_in_Lakhs": 200,
+    "Size_in_SqFt": 2747,
+    "Assumed_Annual_Growth_Percent": 8
+  },
+  "observed_results": {
+    "model_classification": "Yes",
+    "direct_rule": "Yes",
+    "proxy_probability": 0.815,
+    "five_year_regression_lakhs": 293.87,
+    "five_year_scenario_lakhs": 293.87
+  },
+  "scope": "Public page and one successful assessment verified; no uptime guarantee."
+}

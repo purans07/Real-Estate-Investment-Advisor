@@ -12,21 +12,23 @@ def main():
     output=ROOT/'submission'
     output.mkdir(exist_ok=True)
     files=[]
-    for name in ['README.md','DEPLOYMENT.md','.gitignore','requirements.txt','assets','.streamlit/config.toml','app.py','india_housing_prices.csv','Project Title - Data Analyst, BA, FA.docx','Project Title-DS_AI_ML.docx','src','experiments','data/processed','models','reports','mlruns']:
+    for name in ['README.md','SUBMISSION.md','DEPLOYMENT.md','.gitignore','requirements.txt','assets','.streamlit/config.toml','app.py','india_housing_prices.csv','Project Title - Data Analyst, BA, FA.docx','Project Title-DS_AI_ML.docx','src','experiments','data/processed','models','reports','mlruns']:
         p=ROOT/name
         files.extend([p] if p.is_file() else [f for f in p.rglob('*') if f.is_file() and '__pycache__' not in f.parts])
     target=output/'real_estate_investment_advisor.zip'
     with tempfile.TemporaryDirectory() as temp:
         # SQLite backup provides a consistent snapshot even if a viewer is open.
         snapshot=Path(temp)/'mlflow.db'
-        with sqlite3.connect(ROOT/'mlflow.db') as source, sqlite3.connect(snapshot) as dest:
-            source.backup(dest)
+        has_database=(ROOT/'mlflow.db').exists()
+        if has_database:
+            with sqlite3.connect('file:'+str(ROOT/'mlflow.db')+'?mode=ro',uri=True) as source, sqlite3.connect(snapshot) as dest:
+                source.backup(dest)
         records=[{'path':str(f.relative_to(ROOT)),'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in sorted(files)]
-        records.append({'path':'mlflow.db','bytes':snapshot.stat().st_size,'sha256':hashlib.sha256(snapshot.read_bytes()).hexdigest()})
+        if has_database:records.append({'path':'mlflow.db','bytes':snapshot.stat().st_size,'sha256':hashlib.sha256(snapshot.read_bytes()).hexdigest()})
         manifest={'format_version':1,'files':records,'notes':'The Python environment and caches are excluded. Historical MLflow artifacts may contain original workspace paths; see DEPLOYMENT.md.'}
         with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
             for f in files:z.write(f,'real_estate_investment_advisor/'+str(f.relative_to(ROOT)))
-            z.write(snapshot,'real_estate_investment_advisor/mlflow.db')
+            if has_database:z.write(snapshot,'real_estate_investment_advisor/mlflow.db')
             z.writestr('real_estate_investment_advisor/MANIFEST.json',json.dumps(manifest,indent=2))
         with zipfile.ZipFile(target) as z:
             assert z.testzip() is None

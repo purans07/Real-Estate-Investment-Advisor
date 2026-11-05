@@ -84,3 +84,7 @@ Public deployment is verified at [https://real-estate-investment-advisor-purans0
 | 10 | Complete GitHub handover, hosting and demonstration |
 
 This is the briefs' requested planning framework, not a fabricated record of ten elapsed days. No dataset redistribution license is invented.
+
+## Department handover
+
+See [SUBMISSION.md](SUBMISSION.md) for submission links, deliverables, a five-minute demonstration and the limitations to disclose.
